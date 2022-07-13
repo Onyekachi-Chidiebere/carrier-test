@@ -16,14 +16,13 @@ const useHome = () => {
                         return  structuredObject[transactions[i].date].push(transactions[i])
                     }else{
                         return  structuredObject[transactions[i].date] = [transactions[i]];
-
                     }
                 }
             }
         }
 
         let structuredList = [];
-        
+
     })
 
 
