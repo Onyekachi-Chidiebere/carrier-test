@@ -13,20 +13,11 @@ import {
   View,
   Text
 } from 'react-native';
+import Home from './src/screens/home/Home';
 
 
 const App = () => {
-  return (
-    <SafeAreaView >
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-      >    
-        <View>
-          <Text> hello </Text>
-        </View>  
-      </ScrollView>
-    </SafeAreaView>
-  );
+  return <Home />;
 };
 
 
