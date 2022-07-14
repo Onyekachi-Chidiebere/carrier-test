@@ -42,4 +42,4 @@ click on an active filter to return to default;
 use the search field the search through the list with all fields
 
 # Images 
-<img src="/src/images/fullImage.png" width="250" height="400">
+<img src="/src/images/fullImage.png" width="300" height="500">
