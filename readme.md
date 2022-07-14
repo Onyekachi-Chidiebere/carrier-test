@@ -40,3 +40,6 @@ Click on the filter button to filter by a category;
 click on an active filter to return to default;
 
 use the search field the search through the list with all fields
+
+# Images 
+![GitHub Logo](/src/images/fullImage.png)
