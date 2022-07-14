@@ -6,13 +6,12 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "dev": "node server.js",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
-    "@graphql-tools/mock": "^8.7.0",
-    "apollo-server": "^3.10.0",
     "babel-plugin-inline-import": "^3.0.0",
     "casual": "^1.6.2",
     "express": "^4.18.1",
