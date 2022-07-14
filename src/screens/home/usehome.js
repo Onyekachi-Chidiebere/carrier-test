@@ -1,11 +1,11 @@
 import {useEffect, useState} from 'react';
-import transactions from '../../helper/transactions';
+// import transactions from '../../helper/transactions';
 import moment from 'moment';
 import { gql, useQuery } from '@apollo/client';
 
 const GET_TRANSACTIONS = gql`
 query getTransactions {
-    allCats {
+    transactions {
         date
         name
         status
@@ -21,25 +21,22 @@ const useHome = () => {
   const [date, setDate] = useState(new Date());
   const [filterOptions, setFilterOptions] = useState(false);
   const [dateFilter, setDateFilter] = useState(false);
+  const [transactions, setTansactions]=useState([])
 
   const {loading,error,data:rawData,} = useQuery(GET_TRANSACTIONS);
-  console.log({loading, error:error.message, rawData})
 
   useEffect(() => {
+    if(rawData) setTansactions(rawData.transactions)
     //restructure data into sections;
     let structuredObject = {};
     for (let i = 0; i < transactions.length; i++) {
       if (filterOptions) {
-        if (transactions[i].status !== filterOptions) continue;
+        if (transactions[i].status != filterOptions) continue;
       }
       if (
         dateFilter &&
         moment(date).format('LL') !== moment(transactions[i].date).format('LL')
       ) {
-        console.log({
-          date: moment(date).format('LL'),
-          data: moment(transactions[i].date).format('LL'),
-        });
         continue;
       }
 
@@ -75,7 +72,7 @@ const useHome = () => {
     }
 
     setdata(structuredList);
-  }, [searchQuery, filterOptions, date, dateFilter]);
+  }, [searchQuery, filterOptions, date, dateFilter,rawData]);
 
   return {
     data,

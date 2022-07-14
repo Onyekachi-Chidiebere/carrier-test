@@ -9,9 +9,10 @@
 import React from 'react';
 import {ApolloProvider, ApolloClient, InMemoryCache} from '@apollo/client'
 import Home from './src/screens/home/Home';
+import { API_URL } from './src/config/util';
 
 const client = new ApolloClient({
-  uri:'http:localhost:4000',
+  uri:API_URL+'/graphql',
   cache: new InMemoryCache(),
 })
 
