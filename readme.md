@@ -7,31 +7,31 @@ git clone https://github.com/Onyekachi-Chidiebere/carrier-test.git;
 
 cd into carrir-test;
 
-## installation
+## Installation
 
-run yarn  to install all the packages;
+run ```yarn```  to install all the packages;
 
-## server setup
+## Server setup
 navigate to /src/config/util.js and update the API_URL with the IP assigned to your computer by your network;
 
 ## start up the server
 
-use npm run dev to start the server;
+use ```npm run dev to start the server```;
 
-# building the application;
+# Building the application;
 
 ensure you have a device connected to your laptop and in the same network or you have a virtual device started in your laptop;
 
-run npx react-native start to start the metro server;
+run ```npx react-native start to start the metro server```;
 
-## for ios
+## For ios
 
 cd into is and run pod install
 
-then run npx react-native run-ios;
+then run ```npx react-native run-ios```;
 
-## for android 
-run npx react-native run-android 
+## For android 
+run ```npx react-native run-android ```
 
 
 # Usage
