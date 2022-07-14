@@ -42,4 +42,4 @@ click on an active filter to return to default;
 use the search field the search through the list with all fields
 
 # Images 
-![GitHub Logo](/src/images/fullImage.png = 250x400)
+![GitHub Logo](/src/images/fullImage.png| width=200)
