@@ -7,17 +7,18 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  View,
-  Text
-} from 'react-native';
+import {ApolloProvider, ApolloClient, InMemoryCache} from '@apollo/client'
 import Home from './src/screens/home/Home';
 
+const client = new ApolloClient({
+  uri:'http:localhost:4000',
+  cache: new InMemoryCache(),
+})
 
 const App = () => {
-  return <Home />;
+  return <ApolloProvider client={client}>
+            <Home />
+        </ApolloProvider>;
 };
 
 

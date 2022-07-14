@@ -1,7 +1,19 @@
 import {useEffect, useState} from 'react';
 import transactions from '../../helper/transactions';
 import moment from 'moment';
+import { gql, useQuery } from '@apollo/client';
 
+const GET_TRANSACTIONS = gql`
+query getTransactions {
+    allCats {
+        date
+        name
+        status
+        accountNumber
+        type
+      }
+}
+`
 const useHome = () => {
   //initialize data;
   const [data, setdata] = useState([]);
@@ -9,6 +21,10 @@ const useHome = () => {
   const [date, setDate] = useState(new Date());
   const [filterOptions, setFilterOptions] = useState(false);
   const [dateFilter, setDateFilter] = useState(false);
+
+  const {loading,error,data:rawData,} = useQuery(GET_TRANSACTIONS);
+  console.log({loading, error:error.message, rawData})
+
   useEffect(() => {
     //restructure data into sections;
     let structuredObject = {};

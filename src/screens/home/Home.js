@@ -30,6 +30,7 @@ const Home = () => {
   } = useHome();
   return (
     <View style={styles.background}>
+      <SafeAreaView style={{flex: 1}}>
       <Text style={styles.header}>Transcations</Text>
       <Text style={styles.subHeader}>Your current transcation history</Text>
       <Input
@@ -45,7 +46,6 @@ const Home = () => {
         filterOptions={filterOptions}
         setFilterOptions={setFilterOptions}
       />
-      <SafeAreaView style={{flex: 1}}>
         {data.length === 0 && <EmptyCard />}
         <SectionList
           sections={data}
