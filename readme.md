@@ -43,6 +43,7 @@ use the search field the search through the list with all fields
 
 # Images 
 <p style='display:flex'>
-<img src="/src/images/fullImage.png" width="300" height="500">
-<img src="/src/images/fullImage.png" width="300" height="500">
+<img src="/src/images/fullImage.png" width="280" height="500">
+<img src="/src/images/filteredImage.png" width="280" height="500">
+<img src="/src/images/emptyImage.png" width="280" height="500">
 </p>
