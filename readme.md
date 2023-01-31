@@ -5,7 +5,7 @@ Make sure you have react native environment properly setup in your system;
 open your desired directory in a terminal and run 
 git clone https://github.com/Onyekachi-Chidiebere/carrier-test.git;
 
-cd into carrir-test;
+cd into carrier-test;
 
 ## Installation
 
@@ -26,7 +26,7 @@ run ```npx react-native start to start the metro server```;
 
 ## For ios
 
-cd into is and run pod install
+cd into ios directory and run ```pod install```
 
 then run ```npx react-native run-ios```;
 
